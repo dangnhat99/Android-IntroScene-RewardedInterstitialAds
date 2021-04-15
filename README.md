@@ -1,4 +1,4 @@
-
+[![](https://jitpack.io/v/dangnhat99/Android-IntroScene-RewardedInterstitialAds.svg)](https://jitpack.io/#dangnhat99/Android-IntroScene-RewardedInterstitialAds)
 
 `RewardInterstitiaAds IntroScene` is an easy IntroScene UI implement library for `Android`.
 
@@ -13,7 +13,6 @@ How do I use it?
 ### Setup
 
 ## Prerequisites
-[![](https://jitpack.io/v/dangnhat99/Android-IntroScene-RewardedInterstitialAds.svg)](https://jitpack.io/#dangnhat99/Android-IntroScene-RewardedInterstitialAds)
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
 
 ```gradle
@@ -30,7 +29,7 @@ allprojects {
 Add this to your module's `build.gradle` file (make sure the version matches the JitPack badge above):
 ```groovy
 dependencies {
-   implementation 'com.github.dangnhat99:Android-IntroScene-RewardedInterstitialAds:Tag'
+   implementation 'com.github.dangnhat99:Android-IntroScene-RewardedInterstitialAds:1.0'
 }
 ```
 
