@@ -1,2 +1,90 @@
 
-\# EasyViewBinding
+[![JitPack](https://jitpack.io/v/dangnhat99/Android-IntroScene-RewardInterstitialAds.svg)](https://jitpack.io/#dangnhat99/Android-IntroScene-RewardInterstitialAds)
+
+`RewardInterstitiaAds IntroScene` is an easy IntroScene UI implement library for `Android`.
+
+Screenshot
+---
+
+![Demo](scrshots/scr1.jpg)
+
+How do I use it?
+---
+
+### Setup
+
+## Prerequisites
+
+Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
+
+```gradle
+allprojects {
+	repositories {
+		...
+		maven { url "https://jitpack.io" }
+	}
+}
+```
+
+
+##### Dependencies
+```groovy
+dependencies {
+   implementation 'com.github.dangnhat99:Android-IntroScene-RewardInterstitialAds:-SNAPSHOT'
+}
+```
+
+### Functions
+
+**In activity**
+
+```java
+            //show intro scene
+            IntroSceneRewardedAdsFragment introSceneRewardedAdsFragment = new IntroSceneRewardedAdsFragment(new IntroSceneRewardedAdsFragment.IntroSceneCallback() {
+                @Override
+                public void onAdDismiss() {
+                    Log.d("TAG", "onAdDismiss: ");
+                }
+
+                @Override
+                public void onCountDownFinish() {
+                    //TODO show rewarded interstitial ads
+                }
+            });
+```
+
+
+**In fragment**  
+```java
+// from View
+       //show intro scene
+        IntroSceneRewardedAdsFragment introSceneRewardedAdsFragment = new IntroSceneRewardedAdsFragment(new IntroSceneRewardedAdsFragment.IntroSceneCallback() {
+            @Override
+            public void onAdDismiss() {
+                Log.d("TAG", "onAdDismiss: ");
+            }
+
+            @Override
+            public void onCountDownFinish() {
+                //TODO show rewarded interstitial ads
+            }
+        });
+
+        introSceneRewardedAdsFragment.setDrawable(ContextCompat.getDrawable(getContext(),R.drawable.dota2_social));
+        introSceneRewardedAdsFragment.setTextTitle("Watch this video to earn more coin");
+        introSceneRewardedAdsFragment.setTimeCountDown(10); //time in second
+
+        introSceneRewardedAdsFragment.show(getChildFragmentManager(), "YOUR_TAG");
+```
+
+**IntroScene Options**
+
+- setDrawable(Drawable drawable)
+- setTextTitle(String textTitle)
+- setTextVideoIn(String textVideoIn)
+- setTimeCountDown(int timeCountDown) //second
+
+
+Developed By
+-------
+Dmnhat 
