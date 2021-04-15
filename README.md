@@ -51,6 +51,12 @@ dependencies {
                     //TODO show rewarded interstitial ads
                 }
             });
+	    
+	    introSceneRewardedAdsFragment.setDrawable(ContextCompat.getDrawable(this,R.drawable.dota2_social));
+            introSceneRewardedAdsFragment.setTextTitle("Watch this video to earn more coin");
+            introSceneRewardedAdsFragment.setTimeCountDown(10); //time in second
+
+            introSceneRewardedAdsFragment.show(getSupportFragmentManager(), "YOUR_TAG");
 ```
 
 
